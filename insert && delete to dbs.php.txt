@@ -1,0 +1,35 @@
+
+
+<?php
+
+require 'db.php';
+$conn = OpenCon();
+
+
+    
+
+$F=$_GET['Fr'];
+$R=$_GET['Ri'];
+$L=$_GET['Le'];
+
+
+
+if($_GET['button']=="button1"){  //save
+  
+         
+          $sql = "INSERT INTO dbs (id,forward,right,left)values('number','value1','value2','value3')";
+         mysqli_query($conn, $sql);
+}
+ 
+else if($_GET['button']=="button2"){  //delte
+ 
+ 
+ $sql=" DELETE FROM dbs WHERE forward=$F and right=$R and left=$L";   
+    
+    mysqli_query($conn, $sql);
+
+
+}
+
+CloseCon($conn);
+?>

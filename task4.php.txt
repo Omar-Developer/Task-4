@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+     <meta name ="viewport" content="width=device-width , initial-scale=1">
+     
+   
+     
+     
+<style>
+
+   
+ 
+    
+    .button {
+   background-color: #4D5656; 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  height:30px;
+        
+    }
+    
+    
+    .button1 {border-radius: 16px;
+    width:70px; 
+   
+    
+}
+.button2 {border-radius: 16px;
+ 
+  width:70px;  
+     margin: 5px 0px 0px 10px;
+}
+.button3 {
+    border-radius: 16px;
+  width:70px;  
+    margin: 5px 0px 0px 10px; 
+}
+  
+  
+    .btn {
+   
+    color: #fff;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.btn:active {
+    background: #2980b9;
+    top: 2px;
+}
+
+.btn:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+     width: 60px;
+  
+
+
+}
+  
+ 
+
+
+
+
+#head{
+    float:top;
+ width:100%;
+       height: 80px;
+       background: #4B79A1;   
+}
+  
+  #end{
+  
+    width:100%;
+       height: 50px;
+       background: #4B79A1 ;
+   margin: 35% 0px 0%  0%;
+   float:bottom;  
+}
+    #Forward{
+   
+         font-size: 15px;
+     margin: -7px 0px 0px -9px; 
+   
+    }
+    
+    
+    #delete{
+   
+         font-size: 15px;
+     margin: -7px 0px 0px -5px; 
+   
+    }
+    
+    #save{
+         font-size: 15px;
+      margin: -7px 0px 0px 0px; 
+        
+    }
+    
+    #start{
+         font-size: 15px;
+      margin: -7px 0px 0px -3px; 
+        
+    }
+    
+    
+    
+    #Rlabel{
+        margin: 0px 0px 0px 18px;
+    }
+   
+  #Llabel{
+      margin: 0px 0px 0px 26px;   
+  }
+
+  
+  
+   #controler{
+         margin: 10% 0px 0px 40px;
+     -moz-transform: scale(1.3); 
+    zoom:127%; 
+    }
+  
+   
+   #targetFrame{
+       margin: 30px 20px 0px 0px;
+   }
+       
+     
+        
+       
+    
+</style>
+        
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Anton&family=Piedra&family=Satisfy&display=swap');
+    h1{
+         
+      font-family: 'Satisfy', cursive;
+      color: #17202A;
+      font-size:  300% ;
+      margin:  2%   0px 0px  40%;
+       }
+   </style>
+        
+        
+        <style>
+            
+             @media only screen and (max-width: 600px) {
+html {
+    transform: rotate(90deg);
+    transform-origin: right top ;
+    width: 90vh;
+ 
+   
+   overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    
+ right:0;
+  }
+  
+  
+   
+    .button {
+   background-color: #4D5656; 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  height:30px;
+        
+    }
+    
+    
+    .button1 {border-radius: 16px;
+    width:70px; 
+   
+    
+}
+.button2 {border-radius: 16px;
+ 
+  width:70px;  
+     margin: 5px 0px 0px 10px;
+}
+.button3 {
+    border-radius: 16px;
+  width:70px;  
+    margin: 5px 0px 0px 10px; 
+}
+  
+  
+    .btn {
+   
+    color: #fff;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.btn:active {
+    background: #2980b9;
+    top: 2px;
+}
+
+.btn:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+     width: 60px;
+  
+
+
+}
+  
+ 
+
+
+
+
+#head{
+    float:top;
+ width:100%;
+       height: 50px;
+       background: #4B79A1;   
+}
+  
+  #end{
+  
+    width:100%;
+       height: 50px;
+       background: #4B79A1 ;
+   margin: 247px 0px 0%  0%;
+   float:bottom;  
+}
+    #Forward{
+   
+         font-size: 15px;
+     margin: -7px 0px 0px -9px; 
+   
+    }
+    
+    
+    #delete{
+   
+         font-size: 15px;
+     margin: -7px 0px 0px -5px; 
+   
+    }
+    
+    #save{
+         font-size: 15px;
+      margin: -7px 0px 0px 0px; 
+        
+    }
+    
+    #start{
+         font-size: 15px;
+      margin: -7px 0px 0px -3px; 
+        
+    }
+    
+   
+    #Flabel{
+        
+          margin: 0px -5px 0px 0px;
+    }
+    #Rlabel{
+        margin: 0px 0px 0px 18px;
+   
+        
+    }
+   
+  #Llabel{
+      margin: 0px 0px 0px 26px;   
+  
+      
+  }
+
+  
+  
+   #controler{
+         margin: 10% 0px 0px 40px;
+      -moz-transform: scale(1.3); 
+    zoom:63%;
+    }
+  
+   
+   #targetFrame{
+       margin: 10% 20px 0px 0px;
+    -moz-transform: scale(1.3); 
+    zoom:40%;
+   }
+       
+     
+        
+       
+    
+
+        
+   
+       @import url('https://fonts.googleapis.com/css2?family=Anton&family=Piedra&family=Satisfy&display=swap');
+    h1{
+         
+      font-family: 'Satisfy', cursive;
+      color: #17202A;
+      font-size:  200% ;
+      margin:  2%   0px 0px  40%;
+       }
+       
+     
+
+             }   
+            
+        </style>
+        
+        
+    </head>
+   
+    <body >
+
+
+<div id="head"> <h1 >Control Panel</h1></div>
+    
+
+ <div id="controler" style="float:left">  
+
+  
+  
+ <label id="Flabel">Forward:</label>      
+ 
+  <input id ="ff" type="text"  name="forward"><br><br>
+  <label id="Rlabel">Right:</label>
+  
+  <input id ="rr" type="text"  name="right" ><br><br>
+  <label id="Llabel">Left:</label>
+  <input id ="ll" type="text"  name="left"><br><br>
+  
+  
+      <div style="float:left">
+       <button  class="button button1 btn"  name="button1" onclick="Delete()" > <div id="delete"> delete</div></button>      
+      </div>
+      
+      
+      <div style="float:left">
+       <button class="button button2 btn"  name="button2" onclick="Save()" > <div id="save"> save</div> </button>      
+      </div>
+      
+      <div style="float:left" >
+       <button class="button button3 btn"  name="button3" onclick="map() " > <div id="start"> start</div></button>      
+      </div>
+      
+      </div>
+      
+      
+      
+    
+      
+      
+      
+      
+    
+     
+      
+      <div id="iframe" style="float:right">
+          
+     
+      
+      <iframe id="targetFrame" src="morePage.html" style="border: 5px solid #17202A; width: 700px; height: 346px;">
+           
+       </iframe >
+     </div>
+    
+      
+    
+        
+
+ <script type="text/javascript">
+ 
+ 
+ function Save(){
+     
+     var button="button1";
+     
+     fu(button);
+     
+      }
+ 
+ function Delete(){
+     
+     var button="button2";
+     
+     fu(button);
+ }
+ 
+ 
+ function fu(button){
+    
+ var btn= button;
+ 
+ var val1 = document.getElementById("ff");
+ var val2 = document.getElementById("rr");
+ var val3 = document.getElementById("ll");
+ 
+ var fw=encodeURIComponent(val1.value);
+ var ri=encodeURIComponent(val2.value);
+ var le=encodeURIComponent(val3.value);
+
+  var bol1=false;
+  var bol2=false;
+  var bol3=false;
+  var exp=true;
+
+if(parseInt(fw)){
+    bol1=true;
+}
+
+if(parseInt(ri)){
+    bol2=true;
+}
+
+if(parseInt(le)){
+    bol3=true;
+}
+
+  
+  
+  if(bol1==true && bol2==false && bol3==false){
+      ri=0;
+      le=0;
+  }
+  
+  else if(bol1==false && bol2==true && bol3==false){
+      fw=0;
+      le=0;
+  }
+  
+   else if(bol1==false && bol2==false && bol3==true){
+      fw=0;
+      ri=0;
+  }
+  
+   else if(bol1==true && bol2==true && bol3==false){
+      le=0;
+  }
+  
+   else if(bol1==false && bol2==true && bol3==true){
+      fw=0;
+  }
+   else if(bol1==false && bol2==false && bol3==false){
+      exp=false;
+  }
+  
+  
+  if(exp==true){
+     var s1="& Ri="+ri;
+     var s2=s1+"& Le="+le;
+    var url ="https://android-b.com/Task1/insert-&&-delete-to-dbs.php?Fr=" + fw +s2 + "& button="+btn;
+
+    // get the URL
+    http = new XMLHttpRequest(); 
+    http.open("GET", url, true);
+    http.send(null);
+ 
+ 
+ 
+ 
+ }}
+ </script>
+
+
+
+
+    <script type="text/javascript">
+
+ function map() {
+     
+ var val1 = document.getElementById("ff");
+ var val2 = document.getElementById("rr");
+ var val3 = document.getElementById("ll");
+ 
+ var fw=encodeURIComponent(val1.value);
+ var ri=encodeURIComponent(val2.value);
+ var le=encodeURIComponent(val3.value);
+     
+ 
+ if(parseInt(fw)){
+ document.getElementById("targetFrame").contentWindow.targetFunction("F",parseInt(fw));    
+ }
+ 
+ if(parseInt(ri)){
+     document.getElementById("targetFrame").contentWindow.targetFunction("R",parseInt(ri));
+ }
+ 
+ if(parseInt(le)){
+     document.getElementById("targetFrame").contentWindow.targetFunction("L",parseInt(le));
+ }
+     
+     
+ 
+ 
+     
+     
+ }
+    
+ </script>   
+   
+
+
+   <div id="end"> </div> 
+  
+   </body>
+    
+  
+   
+    
+    </html>

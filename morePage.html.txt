@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html  >
+    
+    <head>
+     
+  
+     
+     
+<style>
+
+ 
+  html,body{
+      background-color: #83E385;
+ height:100%; 
+ width:100%; 
+ 
+ 
+  }
+  
+    
+</style>
+        
+   
+        
+        
+    </head>
+   
+    <body >
+
+        
+      
+    
+    <script type="text/javascript">
+  
+  var op={
+   Old:"N",
+   New:"N",
+ 
+  
+   x1:300,
+   y1:200,
+   x2:300,
+   y2:200  
+  };
+  
+  
+ 
+ 	
+ 
+ 
+function draw_arrow(ctx,fx,fy,tx,ty){ //ctx is the context
+    var angle=Math.atan2(ty-fy,tx-fx);
+    ctx.moveTo(fx,fy); ctx.lineTo(tx,ty);
+    var w=3.5; //width of arrow to one side. 7 pixels wide arrow is pretty
+    ctx.strokeStyle="#17202A"; ctx.fillStyle="#EA0520";
+    angle=angle+Math.PI/2; tx=tx+w*Math.cos(angle); ty=ty+w*Math.sin(angle);
+    ctx.lineTo(tx,ty);
+  //Drawing an isosceles triangle of sides proportional to 2:7:2
+    angle=angle-1.849096; tx=tx+w*3.5*Math.cos(angle); ty=ty+w*3.5*Math.sin(angle);
+    ctx.lineTo(tx,ty);
+    angle=angle-2.584993; tx=tx+w*3.5*Math.cos(angle); ty=ty+w*3.5*Math.sin(angle);
+    ctx.lineTo(tx,ty);
+    angle=angle-1.849096; tx=tx+w*Math.cos(angle); ty=ty+w*Math.sin(angle);
+    ctx.lineTo(tx,ty);
+    ctx.stroke(); ctx.fill();
+}
+
+ function targetFunction(direction,Movement) {
+ op.New=direction;
+ var mo=Movement;
+  var counter=0;
+ 
+  var canvas = document.getElementById('canvas');
+   
+   var ctx = canvas.getContext('2d');
+
+ ctx.clearRect(0, 0, canvas.width, canvas.height);         
+        
+      if (counter==1){
+          
+      }  
+        
+        
+   else {
+          // for right
+          if( (op.Old=="R" && op.New=="R") || (op.Old=="B" && op.New=="B") || (op.Old=="L" && op.New=="L") || (op.Old=="B" && op.New=="F")){
+        op.x1=op.x2;
+          op.x2=op.x1;  
+          
+          
+          op.y1=op.y2+20;
+          op.y2=op.y1+mo;
+          
+          draw_arrow(ctx,op.x1,op.y1,op.x2,op.y2);
+          
+          op.Old="B";
+       
+         
+          }
+          
+          else if( (op.Old=="F" && op.New=="R") || (op.Old=="B" && op.New=="L") || (op.Old=="R" && op.New=="F")||(op.Old=="N" && op.New=="R")){
+          op.x1=op.x2+20;
+          op.x2=op.x1+mo;
+          
+         
+         op.y1=op.y2;
+          op.y2=op.y1; 
+          
+          draw_arrow(ctx,op.x1,op.y1,op.x2,op.y2);
+         
+         
+             op.Old="R";
+            
+           
+          }
+          
+          else if( (op.Old=="B" && op.New=="R") || (op.Old=="F" && op.New=="L") || (op.Old=="L" && op.New=="F")||(op.Old=="N" && op.New=="L")){
+              
+               op.y1=op.y2;
+          op.y2=op.y1;
+          
+              op.x1=op.x2-20;
+              op.x2= op.x1-mo;
+          
+          draw_arrow(ctx,op.x1,op.y1,op.x2,op.y2);
+          op.Old="L";
+         
+          }
+          
+          
+      
+          else if( (op.Old=="F" && op.New=="F")   || (op.Old=="R" && op.New=="L") || (op.Old=="L" && op.New=="R")  ||(op.Old=="N" && op.New=="F")) {
+        
+            op.x1=op.x2;
+        
+            op.x2=op.x1;
+        
+       
+            
+           op.y1=op.y2-20;
+               op.y2=op.y1-mo; 
+          
+          draw_arrow(ctx,op.x1,op.y1,op.x2,op.y2);
+         
+              op.Old="F";
+             
+            
+          }
+          
+         
+         
+          
+      }
+              
+         
+         
+         
+         
+         
+      }
+      
+     
+
+     
+      
+      
+      
+
+       
+
+    
+ </script>   
+   
+   
+ <canvas id = "canvas" width = "900" height = "900"></canvas>
+   </body>
+    
+    </html>
